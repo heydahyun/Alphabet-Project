@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Width</title>
+  <style>
+  @font-face {
+    font-family: Lausanne;
+    src: url("/Users/dahyun/Desktop/Sources/Fonts/TWK Lausanne Family Trial for Students/Fonts/Web/TWKLausanne-700.woff2") format('woff2');
+    font-weight:800;
+  }
+  * {
+    font-family: "Lausanne";
+  }
+  body {
+    background-color: black;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    cursor: url("cursor2.png"), pointer;
+  }
+  .grow {
+    padding: 0 0px;
+    height: 100vh;
+    /* Origional height */
+    box-sizing: border-box;
+    display: flex;
+  }
+  .grow .item {
+    box-sizing: border-box;
+    flex-grow: 2;
+    transition: width 0.6s ease;
+    width: 0;
+    box-shadow: 0 0 15px black;
+  }
+  .grow .item:hover {
+    width: 60%;
+    /* This is the height on hover */
+  }
+  .grow .item {
+    position: relative;
+    overflow: hidden;
+  }
+  .grow .item .text{
+    position: absolute;
+    font-size: 4vw;
+    font-weight: 800;
+    font-family: "Lausanne";
+    line-height: 120%;
+    letter-spacing: -3px;
+    color: #000;
+    /* opacity: 0; */
+    /* text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5); */
+    /* bottom: 0%; */
+    top: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /* background-color: rgba(127, 127, 127, 0.5); */
+    text-align: left;
+    transition-property: opacity, bottom;
+    transition-duration: 0.1s;
+    transition-delay: 0;
+    transition-timing-function: linear, ease;
+    box-shadow: 0 0 30px black;
+  }
+
+  .grow .item:hover .text {
+    opacity: 1;
+    hyphens: auto;
+    font-size: 6.7vw;
+    /* bottom: 10%; */
+    transition-duration: 0.3s, 0.7s;
+    transition-delay: 0.4s, 0.2s;
+  }
+  .grow .item:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: currentColor;
+    background-image: url("3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 5% 5%;
+  }
+
+  .grow .item:nth-child(3n):before {
+    background-image: url("3.png");
+    background-position: 25% 25%;
+  }
+  .grow .item:nth-child(3n-1):before {
+    background-image: url("3.png");
+    background-position: 45% 45%;
+  }
+  .grow .item:nth-child(3n-2):before {
+    background-image: url("3.png");
+    background-position: 65% 65%;
+  }
+  .grow .item:nth-child(3n-3):before {
+    background-image: url("3.png");
+    background-position: 85% 85%;
+  }
+  </style>
+</head>
+<body>
+
+<div class="grow">
+
+  <!-- <div class="item1" style="background-color:#FF8080; color: #000; font-size: 3.7vw; font-weight: 400; font-family: sans-serif; line-height: 120%; text-align: center;">
+    <div class="text"><br>&nbsp한&nbsp<br>&nbsp국&nbsp<br>&nbsp어&nbsp</div>
+  </div> -->
+  <div class="item1" style="background-color:#D3D3D3; color: #000; font-size: 4vw; font-weight: 700; font-family: sans-serif; line-height: 110%; text-align: center;">
+    <div class="text">KOR</div>
+  </div>
+  <div class="item" style="color:#4B8DCA;">
+    <div class="text">길이는 물체의 한 끝에서 다른 끝까지의 공간적 거리이다. </div>
+  </div>
+  <div class="item" style="color:#4B8DCA;">
+    <div class="text">길이는 수직의 정도를 나타내는 높이, 두께, 또는 면과 면 사이의 수직 거리를 나타내는 너비와 구별되어야 한다.</div>
+  </div>
+  <div class="item" style="color:#4B8DCA;">
+    <div class="text">길이라는 용어는 길이가 측정되어야 하는 물체의 특정 차원에서 사용되는데, 면적은 2차원의 측정, 부피는 3차원의 측정인 것 처럼 길이는 1차원의 측정이다.</div>
+  </div>
+  <div class="item" style="color:#4B8DCA;">
+    <div class="text">물체의 크기나 양을 정확하게 판단하기 위하여 제일 먼저 길이의 표준을 정하여 그 표준과 비교하여 길이를 판단하였는데,</div>
+  </div>
+  <div class="item" style="color:#4B8DCA;">
+    <div class="text">옛날에는 성인 남자 신체의 한 부분을 길이의 표준으로 이용하였으며, 현재는 단위선분을 단위로 측정된다.</div>
+  </div>
+  <div class="item" style="color:#4B8DCA;">
+    <div class="text">임의의 점 P, Q 사이의 거리를 측정할 때, 선분 PQ를 잡고 이 선분의 길이가 단위 선분의 몇 배인지, </div>
+  </div>
+  <div class="item" style="color:#4B8DCA;">
+    <div class="text">그리고 이 끝 수가 단위 선분의 1/10의 몇 배인지, 다시 끝 수가 나오면 이 수가 단위 선분의 1/10²의 몇 배인지 등의 과정을 되풀이하여 측정한다.</div>
+  </div>
+  <div class="item" style="color:#4B8DCA;">
+    <div class="text">곡선의 길이는 임의의 구간을 정해서 연속함수로 정의하고 연속함수가 표시하는 점들의 집합으로 정의한다.</div>
+  </div>
+  <div class="item" style="color:#4B8DCA;">
+    <div class="text">18세기 이전에는 선에 자연히 길이가 구비되어 있다고 생각했으나 18세기 이후부터 선의 길이를 공리적인 입장인 입장에서 엄밀히 정의하였다.</div>
+  </div>
+  <div class="item" style="color:#4B8DCA;">
+    <div class="text">물리학적 개념에서는 어떠한 현상이 일어난 시간을 시간의 길이라고 한다.</div>
+  </div>
+
+  <!-- <div class="item1" style="background-color:black; color: #FF8080; font-size: 7.7vw; font-weight: 400; font-family: sans-serif; line-height: 100%; text-align: center;">
+    <div class="text">&nbspE&nbsp<br>&nbspN&nbsp<br>G<br>L<br>I<br>S<br>H</div>
+  </div> -->
+  <div class="item1" style="background-color:#D3D3D3; color: #000; font-size: 4vw; font-weight: 700; font-family: sans-serif; line-height: 120%; text-align: center;">
+    <div class="text">ENG</div>
+  </div>
+  <div class="item" style="color:#FFE8A5;">
+    <div class="text">Length is a measure of distance. </div>
+  </div>
+  <div class="item" style="color:#FFE8A5;">
+    <div class="text">In the International System of Quantities, length is a quantity with dimension distance.</div>
+  </div>
+  <div class="item" style="color:#FFE8A5;">
+    <div class="text">In most systems of measurement a base unit for length is chosen, </div>
+  </div>
+  <div class="item" style="color:#FFE8A5;">
+    <div class="text">from which all other units are derived. In the International System of Units (SI) system the base unit for length is the metre.</div>
+  </div>
+  <div class="item" style="color:#FFE8A5;">
+    <div class="text">Length is commonly understood to mean the most extended dimension of a fixed object.</div>
+  </div>
+  <div class="item" style="color:#FFE8A5;">
+    <div class="text">However, this is not always the case and may depend on the position the object is in.</div>
+  </div>
+  <div class="item" style="color:#FFE8A5;">
+    <div class="text">Various terms for the length of a fixed object are used, and these include height,</div>
+  </div>
+  <div class="item" style="color:#FFE8A5;">
+    <div class="text">which is vertical length or vertical extent, and width, breadth or depth.</div>
+  </div>
+  <div class="item" style="color:#FFE8A5;">
+    <div class="text">Height is used when there is a base from which vertical measurements can be taken.</div>
+  </div>
+  <div class="item" style="color:#FFE8A5;">
+    <div class="text">Width or breadth usually refer to a shorter dimension when length is the longest one.</div>
+  </div>
+  <div class="item" style="color:#FFE8A5;">
+    <div class="text">Depth is used for the third dimension of a three dimensional object.</div>
+  </div>
+  <div class="item" style="color:#FFE8A5;">
+    <div class="text">Length is the measure of one spatial dimension, whereas area is</div>
+  </div>
+  <div class="item" style="color:#FFE8A5;">
+    <div class="text">a measure of two dimensions (length squared) and volume is a measure of three dimensions (length cubed).</div>
+  </div>
+
+  <!-- <div class="item1" style="background-color:black; color: #FF8080; font-size: 7.7vw; font-weight: 400; font-family: sans-serif; line-height: 100%; text-align: center;">
+    <div class="text">&nbspD&nbsp<br>E<br>U<br>T<br>S<br>C<br>H</div>
+  </div> -->
+  <div class="item1" style="background-color:#D3D3D3; color: #000; font-size: 4vw; font-weight: 700; font-family: sans-serif; line-height: 120%; text-align: center;">
+    <div class="text">DEU</div>
+  </div>
+  <div class="item" style="color:#00B075;">
+    <div class="text">Die Länge als physikalische Größe gibt die Ausdehnung physikalischer Objekte und deren Abstände zueinander an.</div>
+  </div>
+  <div class="item" style="color:#00B075;">
+    <div class="text">Die Längenmessung erfolgt durch Vergleich der zu messenden Länge mit Maßstäben bekannter Länge.</div>
+  </div>
+  <div class="item" style="color:#00B075;">
+    <div class="text">Die Länge von Abständen zweier Punkte bzw. eines Maßstabes wird in der klassischen Physik als konstant betrachtet.</div>
+  </div>
+  <div class="item" style="color:#00B075;">
+    <div class="text">In der speziellen Relativitätstheorie ist die Länge jedoch abhängig</div>
+  </div>
+  <div class="item" style="color:#00B075;">
+    <div class="text">vom relativen Bewegungszustand des jeweiligen Beobachters, man spricht von einer relativistischen Längenkontraktion.</div>
+  </div>
+
+</div>
+
+</body>
+</html>
